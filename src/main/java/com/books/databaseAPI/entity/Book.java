@@ -24,4 +24,9 @@ public class Book {
     private String genre;
     private int avg_rating;
 }
+/*
+Get books by genre
+Query for top 5 expensive, Top 5 rated, Top 5 most recent
+Book pages -> (Author pages, Publisher pages)
+ */
 

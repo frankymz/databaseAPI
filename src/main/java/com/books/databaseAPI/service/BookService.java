@@ -26,6 +26,7 @@ public class BookService {
 
     public Book getBookById(String id) {
         return repository.findById(id).orElse(null);
+        //.orElse(null);
     }
 
     public Book getBookByName(String name) {
@@ -39,6 +40,7 @@ public class BookService {
 
     public Book updateBook(Book book) {
         Book existingBook = repository.findById(book.getId()).orElse(null);
+        //
         existingBook.setName(book.getName());
         existingBook.setDescription(book.getDescription());
         existingBook.setPrice(book.getPrice());

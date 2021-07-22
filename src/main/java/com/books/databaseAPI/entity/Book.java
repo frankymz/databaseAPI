@@ -1,5 +1,6 @@
 package com.books.databaseAPI.entity;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,13 +14,15 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "PRODUCT_TBL")
-public class Product {
+@Table(name = "book")
+public class Book {
     @Id
-    @GeneratedValue
-    private int id;
+    private String id;
     private String name;
-    private int quantity;
+    private String description;
     private double price;
+    private String cover;
+    private String genre;
+    private int avg_rating;
 }
 

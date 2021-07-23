@@ -40,6 +40,11 @@ public class BookController {
         return service.getBookByName(name);
     }
 
+    @GetMapping("/books/{genre}")
+    public List<Book> findBookByGenre(@PathVariable String genre) {
+        return service.getBookByGenre(genre);
+    }
+
     @PutMapping("/update")
     public Book updateBook(@RequestBody Book book) {
         return service.updateBook(book);

@@ -22,7 +22,8 @@ public class Book {
     private double price;
     private String cover;
     private String genre;
-    private int avg_rating;
+    private float avg_rating;
+    private String author;
 }
 /*
 Get books by genre

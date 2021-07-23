@@ -49,6 +49,7 @@ public class BookService {
         existingBook.setCover(book.getCover());
         existingBook.setGenre(book.getGenre());
         existingBook.setAvg_rating(book.getAvg_rating());
+        existingBook.setAuthor(book.getAuthor());
         return repository.save(existingBook);
     }
 }

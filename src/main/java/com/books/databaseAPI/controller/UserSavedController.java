@@ -6,6 +6,7 @@ import com.books.databaseAPI.service.UserSaveService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.nio.file.Path;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,15 +17,10 @@ public class UserSavedController {
     @Autowired
     private UserSaveService userSaveService;
 
-//    @PostMapping("/addSave")
-//    public UserSave addUserSave(@RequestBody UserSave userSave){
-//        return userSaveService.saveUserSave(userSave);
-//    }
-//
-//    @PostMapping("/addSaved")
-//    public List<UserSave> addUserSaves(@RequestBody List<UserSave> userSaves) {
-//        return userSaveService.saveUserSaves(userSaves);
-//    }
+    @PostMapping("/addUserSave")
+    public UserSave addUserSave(@RequestBody UserSave userSave){
+        return userSaveService.saveUserSave(userSave);
+    }
 
     @GetMapping("/userSaved")
     public List<UserSave> findAllUserSaved() {
@@ -36,20 +32,9 @@ public class UserSavedController {
         return userSaveService.getUserSaveByUser(user);
     }
 
-//    @GetMapping("/userSave/{book_id}")
-//    public UserSave findBookByBook_Id(@PathVariable String book_id) {
-//        return userSaveService.getBookByBook_Id(book_id);
-//    }
-
-//    @PutMapping("/update")
-//    public UserSave updateUserSave(@RequestBody UserSave userSave) {
-//        return userSaveService.updateUserSave(userSave);
-//    }
-
-//    @DeleteMapping("/delete/{book_id}")
-//    public String deleteUserSave(@PathVariable String book_id) {
-//        return userSaveService.deleteUserSave(book_id);
-//    }
-
+    @DeleteMapping("/deleteById/{id}")
+    public String deleteUserSave( @PathVariable String id) {
+        return userSaveService.deleteUserSave(id);
+    }
 
 }

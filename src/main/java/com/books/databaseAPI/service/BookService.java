@@ -45,6 +45,7 @@ public class BookService {
     public Book updateBook(Book book) {
         Book existingBook = repository.findById(book.getId()).orElse(null);
         //
+        assert existingBook != null;
         existingBook.setName(book.getName());
         existingBook.setDescription(book.getDescription());
         existingBook.setPrice(book.getPrice());

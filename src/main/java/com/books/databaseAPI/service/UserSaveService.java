@@ -14,11 +14,9 @@ public class UserSaveService {
     @Autowired
     private UserSaveRepository userSaveRepository;
 
-//    public UserSave saveUserSave(UserSave userSave){return userSaveRepository.save(userSave);}
-//
-//    public List<UserSave> saveUserSaves(List<UserSave> userSaves) {
-//        return userSaveRepository.saveAll(userSaves);
-//    }
+    public UserSave saveUserSave(UserSave userSave){
+        return userSaveRepository.save(userSave);
+    }
 
     public List<UserSave> getUserSaves() {
         return userSaveRepository.findAll();
@@ -28,9 +26,8 @@ public class UserSaveService {
         return userSaveRepository.findByUser(user);
     }
 
-//
-//    public String deleteUserSave(String book_id){
-//        userSaveRepository.deleteByBook_Id(book_id);
-//        return "book_id deleted";
-//    }
+    public String deleteUserSave( String id){
+        userSaveRepository.deleteById( id);
+        return "book_id deleted";
+    }
 }

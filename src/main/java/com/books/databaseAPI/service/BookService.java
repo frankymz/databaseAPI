@@ -29,7 +29,9 @@ public class BookService {
         //.orElse(null);
     }
 
-    public List<Book> getBookByGenre(String genre){ return repository.findByGenre(genre);}
+    public List<Book> getBookByGenre(String genre){
+        return repository.findByGenre(genre);
+    }
 
     public Book getBookByName(String name) {
         return repository.findByName(name);

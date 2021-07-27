@@ -30,4 +30,8 @@ public class UserSaveService {
         userSaveRepository.deleteById( id);
         return "book_id deleted";
     }
+
+    public UserSave getUserSaveByUserAndBook(String user, String book) {
+        return userSaveRepository.findByUserAndBook(user, book);
+    }
 }

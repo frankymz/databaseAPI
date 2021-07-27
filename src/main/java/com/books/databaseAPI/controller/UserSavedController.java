@@ -22,6 +22,11 @@ public class UserSavedController {
         return userSaveService.saveUserSave(userSave);
     }
 
+    @GetMapping("userSaved/{user}/{book}")
+    public UserSave findUserSaveByUserAndBook(@PathVariable String user, @PathVariable String book){
+        return userSaveService.getUserSaveByUserAndBook(user, book);
+    }
+
     @GetMapping("/userSaved")
     public List<UserSave> findAllUserSaved() {
         return userSaveService.getUserSaves();

@@ -25,9 +25,5 @@ public class Book {
     private float avg_rating;
     private String author;
 }
-/*
-Get books by genre
-Query for top 5 expensive, Top 5 rated, Top 5 most recent
-Book pages -> (Author pages, Publisher pages)
- */
+
 

@@ -10,4 +10,6 @@ public interface UserSaveRepository extends JpaRepository<UserSave, String> {
     List<UserSave> findByUser(String user);
 
     UserSave findByUserAndBook(String user, String book);
+
+//    void deleteByUserBook(String user, String book);
 }

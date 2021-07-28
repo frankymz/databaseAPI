@@ -37,6 +37,11 @@ public class UserSavedController {
         return userSaveService.getUserSaveByUser(user);
     }
 
+//    @DeleteMapping("/deleteByIdName/{user}/{book}")
+//    public void deleteUserSaveByUserBook(@PathVariable String user, @PathVariable String book){
+//         userSaveService.deleteUserSaveUserBook(user, book);
+//    }
+
     @DeleteMapping("/deleteById/{id}")
     public String deleteUserSave( @PathVariable String id) {
         return userSaveService.deleteUserSave(id);

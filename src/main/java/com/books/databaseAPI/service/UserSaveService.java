@@ -34,4 +34,8 @@ public class UserSaveService {
     public UserSave getUserSaveByUserAndBook(String user, String book) {
         return userSaveRepository.findByUserAndBook(user, book);
     }
+
+//    public void deleteUserSaveUserBook(String user, String book) {
+//        userSaveRepository.deleteByUserBook(user, book);
+//    }
 }

@@ -27,5 +27,9 @@ public class UserReview {
     private int rating;
     @Column(name = "book")
     private String book;
+    @Column(name = "date")
+    private String date;
+    @Column(name = "title")
+    private String title;
 
 }

@@ -31,5 +31,9 @@ public class UserReview {
     private String date;
     @Column(name = "title")
     private String title;
+    @Column(name = "bookcover")
+    private String bookcover;
+    @Column(name = "bookname")
+    private String bookname;
 
 }

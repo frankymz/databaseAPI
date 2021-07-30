@@ -20,4 +20,8 @@ public class ReviewService {
     public UserReview saveUserReview(UserReview userReview){
         return repository.save(userReview);
     }
+
+    public List<UserReview> findReviewByDate(String date) {
+        return repository.getByDate(date);
+    }
 }

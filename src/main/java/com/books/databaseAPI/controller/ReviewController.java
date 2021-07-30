@@ -24,4 +24,6 @@ public class ReviewController {
         return service.saveUserReview(userReview);
     }
 
+    @GetMapping("/review/{date}")
+    public List<UserReview> findReviewByDate(@PathVariable String date){return service.findReviewByDate(date);}
 }

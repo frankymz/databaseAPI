@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface ReviewRepository extends JpaRepository<UserReview, String> {
     List<UserReview> getByBook(String book);
+
+    List<UserReview> getByDate(String date);
 }

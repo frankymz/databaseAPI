@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -22,7 +23,8 @@ public class Book {
     private double price;
     private String cover;
     private String genre;
-    private float avg_rating;
+    @Column(name = "avg_rating")
+    private float avgRating;
     private String author;
 }
 

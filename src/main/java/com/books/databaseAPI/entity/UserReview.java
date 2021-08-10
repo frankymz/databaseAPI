@@ -33,7 +33,5 @@ public class UserReview {
     private String title;
     @Column(name = "bookcover")
     private String bookcover;
-    @Column(name = "bookname")
-    private String bookname;
 
 }

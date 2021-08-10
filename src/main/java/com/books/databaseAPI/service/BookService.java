@@ -3,6 +3,7 @@ package com.books.databaseAPI.service;
 import com.books.databaseAPI.entity.Book;
 import com.books.databaseAPI.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,12 +22,11 @@ public class BookService {
     }
 
     public List<Book> getBooks() {
-        return repository.findAll();
+        return repository.findAll(Sort.by(Sort.Direction.DESC, "avgRating"));
     }
 
     public Book getBookById(String id) {
         return repository.findById(id).orElse(null);
-        //.orElse(null);
     }
 
     public List<Book> getBookByGenre(String genre){
@@ -51,7 +51,7 @@ public class BookService {
         existingBook.setPrice(book.getPrice());
         existingBook.setCover(book.getCover());
         existingBook.setGenre(book.getGenre());
-        existingBook.setAvg_rating(book.getAvg_rating());
+        existingBook.setAvgRating(book.getAvgRating());
         existingBook.setAuthor(book.getAuthor());
         return repository.save(existingBook);
     }
